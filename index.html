@@ -9,16 +9,63 @@
 		<!-- CUSTOM FONT -->
 
 		<!-- FCC check -->
-		<script type="text/javascript" src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
+		<!-- <script type="text/javascript" src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script> -->
 	</head>
 	
 	<body>
 		<div id="main-page">			
 			<header>
+				<p>FCC Survey Form Page</p>
+				<p>Welcome, First thanks you !</p>
 			</header>
-				
+			
+			<main>
+				<p><i>(*: must choose ; s: single choice ; mc: multiple choices ; o: optional)</i></p>
+				<form action="" method="get">
+					<label for="firstname">First Name*</label>
+					<input type="text" id="firstname" name="firstname" placeholder="first-name..." required>
+					
+					<label for="lastName">Last Name*</label>
+					<input type="text" id="lastname" name="lastname" placeholder="last-name..." required>
+					
+					<label for="email">Your email*</label>
+					<input type="text" id="email" name="email" placeholder="email...">
+					
+					<label for="Age">Age*</label>
+					<input type="text" id="age" name="age" placeholder="age...">
+					
+					
+					<label for="whatAreYou">What are you</label>
+					<select id="whatAreYou" name="whatAreYou">
+						<option value="student">Student</option>
+						<option value="fullTimeJob">Full time job</option>
+						<option value="AllTheTime">All the time in the world</option>
+						<option value="ShowPaper">Show me your papers first</option>
+					</select>
+					   
+					Center of interest (mc) :
+					<label><input type="checkbox" checked/>Sport<label>
+					<label><input type="checkbox"/>Self-Learning (books, internet, courses)<label>
+					<label><input type="checkbox"/>World news<label>
+					<label><input type="checkbox"/>Politics<label>
+					<label><input type="checkbox"/>Politics<label>
+					<label><input type="checkbox"/>Reading<label>
+					<label><input type="checkbox"/>Animals<label>
+					<label><input type="checkbox"/>Nature<label>
+					
+					Who are you (cense you briefly)* :
+					<textarea cols="60" rows="15" name="whoYouAre"></textarea>
+					
+					Any suggestions (o) :
+					<textarea cols="60" rows="15" name="whoYouAre" required></textarea>
+					
+					<input type="submit" value="Submit"></input>
+					<input type="reset" value="Reset">
+				</form>
+			</main>
 		
 			<footer>
+				<p>pocahontas123</p>
 			</footer>	
 		</div><!-- #main-page -->
 	</body>
