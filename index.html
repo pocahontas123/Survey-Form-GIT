@@ -7,64 +7,68 @@
 		<!-- Font Awesome CDN -->
 
 		<!-- CUSTOM FONT -->
-
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Knewave" rel="stylesheet">
 		<!-- FCC check -->
-		<!-- <script type="text/javascript" src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script> -->
+		<script type="text/javascript" src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
 	</head>
 	
 	<body>
 		<div id="main-page">			
 			<header>
-				<p>FCC Survey Form Page</p>
-				<p>Welcome</p>
+				<h1 id="title">FCC Survey Form Page</h1>
 			</header>
 			<!-- -->
 			<main>
-				<p><i>(*: must choose ; s: single choice ; mc: multiple choices ; o: optional)</i></p>
-				<form id="main-form" action="" method="get">
+				<p id="description"><i>(*: must choose ; s: single choice ; mc: multiple choices ; o: optional)</i></p>
+				<form id="survey-form" action="" method="get">
 					<span id="basic-info">
-						<label for="firstname">First Name*</label>
-						<input type="text" id="firstname" name="firstname" placeholder="first-name..." required>
+						<label id="name-label" for="name">First Name*</label>
+						<input type="text" id="name" name="name" placeholder="first-name..." required>
 						
-						<label for="lastName">Last Name*</label>
+						<label id="lastName-label" for="lastName">Last Name*</label>
 						<input type="text" id="lastname" name="lastname" placeholder="last-name..." required>
 						
-						<label for="email">Your email*</label>
-						<input type="text" id="email" name="email" placeholder="email...">
+						<label id="email-label" for="email">Your email*</label>
+						<input type="email" id="email" name="email" placeholder="email..." required>
 						
-						<label for="Age">Age*</label>
-						<input type="text" id="age" name="age" placeholder="age...">
+						<label id="number-label" for="number">Age*</label>
+						<input type="number" id="number" name="number" min="0" max="150" placeholder="age...">
+					
+						<label id="sex-label" for="sex">Sex</label>
+						<input type="radio" name="gender" value="male">Male</br>
+						<input class="margin" type="radio" name="gender" value="female">Female
 					</span>
 					
 					<span id="advanced-info">	
 						<label class="first" for="whatAreYou">What are you*</label>
-						<select id="whatAreYou" name="whatAreYou" required>
-							<option value="student">Student</option>
-							<option value="fullTimeJob">Full time job</option>
-							<option value="AllTheTime">All the time in the world</option>
-							<option value="ShowPaper">Show me your papers first</option>
+						<select id="dropdown" name="whatAreYou" required>
+							<option name="whatAreYou" value="student">Student</option>
+							<option name="whatAreYou" value="fullTimeJob">Full time job</option>
+							<option name="whatAreYou" value="AllTheTime">All the time in the world</option>
+							<option name="whatAreYou" value="ShowPaper">Show me your papers first</option>
 						</select>
 						<br><br>
 						<label for="centerOfInterest">Center of interest (mc o)</label>
-						<label><input type="checkbox"/>Sport<label>
-						<label><input type="checkbox"/>Self-Learning<label>
-						<label><input type="checkbox"/>World news<label>
-						<label><input type="checkbox"/>Politics<label>
-						<label><input type="checkbox"/>Politics<label>
-						<label><input type="checkbox"/>Reading<label>
-						<label><input type="checkbox"/>Animals<label>
-						<label><input type="checkbox"/>Nature<label>
+						<label><input type="checkbox" value="sport"/>Sport<label>
+						<label><input type="checkbox" value="learning"/>Learning<label>
+						<label><input type="checkbox" value="news"/>News<label>
+						<label><input type="checkbox" value="politics"/>Politics<label>
+						<label><input type="checkbox" value="reading"/>Reading<label>
+						<label><input type="checkbox" value="animals"/>Animals<label>
+						<label><input type="checkbox" value="nature"/>Nature<label>
 						<br>
 						<label for="whoAreYou">Who are you (cense you briefly)*</label>
-						<textarea cols="60" rows="15" name="whoYouAre" placeholder="write here"></textarea>
+						<textarea cols="60" rows="15" name="whoYouAre" placeholder="write here" required></textarea>
 						<br><br>
 						<label for="anySuggestions">Any suggestions (o)</label>
-						<textarea cols="60" rows="15" name="anySuggestion" placeholder="write here" required></textarea>
+						<textarea cols="60" rows="15" name="anySuggestion" placeholder="write here"></textarea>
 					</span>
 					
 					<div id="submitReset">
-						<input type="submit" value="Submit"></input>
-						<input type="reset" value="Reset">
+						<input id="submit" type="submit" value="Submit"></input>
+						<input id="reset" type="reset" value="Reset">
 					</div>
 				</form>
 			</main>

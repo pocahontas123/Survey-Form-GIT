@@ -23,9 +23,11 @@ main {
 	width: 800px;
 	margin: 0 auto;
 	border-radius: 8px;
+	
+	font-family: 'Montserrat', sans-serif;
 }
 
-#main-form {
+#survey-form {
 	padding-bottom: 50px;
 	width: 50%;
 	margin: 0 auto;
@@ -37,11 +39,15 @@ footer {
 	background-color: rgb(152, 222, 245);
 	text-align: center;
 	line-height: 100px;
+	
+	font-family: 'Knewave', cursive;
 }
 
 
 
-
+#title {
+	font-family: 'Roboto Condensed', sans-serif;
+}
 
 select {
 	width: 300px;
@@ -88,7 +94,7 @@ input[type=submit], input[type=reset]{
 	border-radius: 8px;
 }
 
-input[type=text], input[type=checkbox] {
+input[type=text], input[type=email], input[type=checkbox], input[type=number] {
 	width: 300px;
 	padding: 12px 20px; /* add space between the  */
 	/* width hover transition */
@@ -99,8 +105,8 @@ input[type=text], input[type=checkbox] {
 #basic-info input{
 	margin: 10px 0;
 }
-#basic-info #age {
-	margin-bottom: 50px;
+#basic-info .margin {
+	margin-bottom: 60px;
 }
 
 #advanced-info label{
